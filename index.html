@@ -4,15 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Set the background image for the entire page */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Set the background image for the entire page */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.background {
+  background-image: url('assets/universe.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling the card */
+.card {
+  background-image: url('assets/ocean.jfif'); /* Card background image */
+  background-size: cover; /* Ensure the image covers the whole card */
+  background-position: center; /* Center the image */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 400px; /* Increased width */
+  height: auto;
+  font-size: 1.2rem; /* Increased font size for better readability */
+}
+
+/* Card title styling */
+.card h1 {
+  font-size: 36px; /* Bigger font for title */
+  margin-bottom: 30px;
+}
+
+/* Card quote styling */
+.card h4 {
+  font-size: 32px; /* Much larger font size for the quote */
+  margin-bottom: 25px;
+  font-style: italic; /* Keep the quote in italic */
+  font-weight: bold; /* Make the quote bold */
+  line-height: 1.5; /* Adjust line spacing for readability */
+  color: #0c0303fd; /* Darker color for better contrast */
+}
+
+/* Card author styling */
+.card p {
+  font-size: 24px; /* Larger font size for author */
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #290e0e; /* Slightly lighter color for the author */
+}
+
+/* Button styling */
+.card button {
+  padding: 15px 30px;
+  font-size: 18px; /* Larger font size for the button */
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+
+    </style>
 </head>
 <body>
-    <h1>Quote App</h1>
-    <h4 id="quote"></h4>
-    <p id="author"></p>
-    <button onclick="getQuote()">get quote</button>
-    <!-- Include Axios before your script -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./assets/js/quote.js"></script>
-
+    <div class="background">
+        <div class="card">
+            <h1>Quote App</h1>
+            <h4 id="quote"></h4>
+            <p id="author"></p>
+            <button onclick="getQuote()">Get Quote</button>
+        </div>
+    </div>
+    
+    <script src="assets/js/quote.js"></script>
 </body>
 </html>
